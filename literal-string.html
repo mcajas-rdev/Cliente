@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    var cadena = "Buenos dias \' Para tod@s en \n \t 2DAW";
+    function cambiar(){
+        document.getElementById("pantalla").cols = 50;
+        document.getElementById("pantalla").rows = 5;
+        document.getElementById("pantalla").value = document.getElementById("texto").value;
+    }
+</script>
+<body>
+    <input type="text" id = "texto">
+    <input type="button" value = "cambiar" onclick="cambiar()">
+    <textarea id="pantalla"></textarea>
+</body>
+</html>
