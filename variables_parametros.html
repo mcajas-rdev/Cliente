@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function miFuncion(elObjecto) {
+            elObjecto.fabricante="Toyota"
+        }
+        micarro = {fabricante:"Honda", modelo:"Accord", año:1998};
+        x=micarro.fabricante; // devuelve Honda
+        miFuncion(micarro); // pasa el objeto 'micarro' a la función
+        y=micarro.fabricante; //Devuelve "Toyota". La propiedad es modificada
+        //dentro de la función
+    </script>
+</body>
+</html>

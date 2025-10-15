@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <input type="text" id="numero1"><br>
+    <input type="button" value="+" onclick="sumar();"><input type="button" value="-"onclick="restar();"> <br>
+    <input type="button" value="*" onclick="multiplicar();"><input type="button" value="/" onclick="dividir();"> <br>
+    <input type="text" id="numero2">
+    <input type="text" id="resultado">
+    <input type="button" value="limpiar" onclick="limpieza();">
+    <script>
+
+
+        let num1 = document.getElementById('numero1').value;
+        let num2 = document.getElementById('numero2').value;
+        function sumar(){
+            document.getElementById('resultado').value = parseInt(num1)+ parseInt(num2);
+        }
+        function multiplicar() {
+            resultado = parseInt(num1) * parseInt(num2);
+        }
+        function dividir() {
+            resultado = parseInt(num1) / parseInt(num2);
+        }
+        function restar() {
+            resultado = parseInt(num1) - parseInt(num2);
+        }
+
+        function limpieza() {
+            document.getElementById('numero1').value ='';
+            document.getElementById('numero2').value ='';
+        }
+
+    </script>
+</body>
+
+</html>

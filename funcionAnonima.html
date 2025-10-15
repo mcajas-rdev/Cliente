@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+    function mapa(función,arreglo) {
+        var resultado=new Array();
+        for (var i = 0; i != arreglo.length; i++){ //cuantos
+        //elementos pasan - 1?
+        resultado[i] = función(arreglo[i]); //asigne valores del arreglo
+        //como parámetros a la función
+        return resultado; //retorna arreglo_resultado al invocar a la
+        //función por cada elemento del arreglo
+        }
+    }
+
+    let resultadoext = mapa(function(x) {returnx * x * x}, [0,1,2,5,10]);
+    console.log(resultadoext);
+    </script>
+</body>
+</html>

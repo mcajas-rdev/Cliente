@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+    <b>Introduzca un numero entre 18 y 99</b> <br> <br>
+    <input type="text" name="age" size="3" onChange="validate(this,18,99);"> <br> <br>
+
+    <script>
+    function validate (obj, lowval, hival){
+        if ((obj.value < lowval) || (obj.value > hival)) alert("!valor invalido!");
+    }
+    </script>
+</body>
+</html>

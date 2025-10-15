@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+        Introduce un numero <input type="text" id="entrada" onchange="comprobacion()"> </input>
+
+
+        <script>
+            let entrada = document.getElementById('entrada');
+            function comprobacion() {
+                 if (isNaN(entrada.value.trim()) || entrada.value.trim() == ""){
+                    alert('No es un numero');
+                 }else{
+                    alert('Es un numero');
+                 }
+            }
+        </script>
+</body>
+</html> 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USANDO BUCLES</title>
+</head>
+<body>
+    <h3>CONFIGURA TU CONTADOR</h3>
+    <label for="">INICIO: </label><input type="number" name="configurador"><br><br>
+    <label for="">FIN: </label><input type="number" name="configurador"><br><br>
+    <label for="">INCREMENTO: </label><input type="number" name='configurador'><br><br>
+    <input type="button" value="A CONTAR" onclick="contador();">
+    <h3>VISUALIZADOR</h3>
+    <textarea id="salida" rows='10' cols="40"></textarea>
+    <script>
+        let inicio = document.getElementsByName('configurador')[0];
+        let final = document.getElementsByName('configurador')[1];
+        let incremento = document.getElementsByName('configurador')[2];
+        let muestra = document.getElementById('salida');
+        function contador() {
+            let primer_valor = parseInt(inicio.value);
+            let ultimo_valor =  parseInt(final.value);
+            let incrementador =  parseInt(incremento.value);
+            let repetir = (ultimo_valor - primer_valor) / incrementador;
+            parseInt(repetir);
+            let i = 0;
+            let numero = primer_valor;
+            while (i <= repetir) {
+                muestra.value = muestra.value + numero+" ";
+                numero = numero + incrementador;
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

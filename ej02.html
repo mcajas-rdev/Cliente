@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <form id="Formulario">
+    Introduce tu nombre: <input type="text" id="nombre"> <br>
+    Introduce tus apellidos: <input type="text" id="apellidos"> <br>
+    Introduce tu edad: <input type="text" id="edad"> <br>
+    Introduce tu salario: <input type="text" id="salario"> <br>
+    
+    Pulse en caso de que haya rellenado todos los datos <input type="button" value="Enviar" onclick="proceso();">
+    </form>
+    <br> <br>
+    Datos recalculados: <br>
+    <textarea id="salida" style="width: 300px; height: 150px;"> </textarea>
+
+    <script>
+
+            window.onload = function() {
+                document.getElementById('Formulario').reset();
+                document.getElementById('salida').value = '';
+            }; 
+
+            let name = document.getElementById("nombre");
+            let surname = document.getElementById('apellidos');
+            let age = document.getElementById('edad');
+            let salary = document.getElementById('salario');
+            let exit = document.getElementById('salida');     
+
+        function proceso() {
+            age= parseInt(age.value);
+            salary = parseFloat(salary.value);
+            salida.value += "Nombre: "+name.value+ "\n";
+            salida.value += "Apellidos: "+surname.value+"\n";
+            if (isNaN(age) || age < 0 || age> 75) {
+                alert('Tienes que introducir una edad correcta');
+            }else{
+            salida.value += "Edad: "+age+"\n";
+            }
+
+            if (salary < 1000.00){
+                if (age < 30) {
+                    salary = 1100.00;
+                    salida.value += "Salario: "+salary+"\n";
+                }else if (age >= 30 && age <= 45) {
+                    salary = (salary*0.03+salary);
+                    salida.value += "Salario: "+salary+"\n";
+                }else{
+                    salary = (salary*0.15+salary);
+                    salida.value += "Salario: "+salary+"\n";
+                }
+            }else if (salary >= 1000.00 && salary <= 2000.00) {
+                if (age > 45) {
+                    salary = (salary*0.03+salary);
+                    salida.value += "Salario: "+salary+"\n";
+                }else if (age <= 45) {
+                    salary = (salary*0.10+salary);
+                    salida.value += "Salario: "+salary+"\n";
+                }
+            }else{
+                salida.value += "Salario: "+salary+"\n";
+            }
+        }
+    </script>
+</body>
+</html>
